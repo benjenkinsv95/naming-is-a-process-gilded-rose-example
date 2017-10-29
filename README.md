@@ -8,4 +8,4 @@
 * Names that Do the Right Thing to names that show Intent
 * Names that show Intent to names that form a Domain Abstraction
 
-To improve my naming, I will be walking through the process above in this GitHub repo. I will be using [Emily Bache's Gilded Rose Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata), since the source code is that terrible and illegible. I will be moving the source code through each of the naming stages, until it forms a domain abstraction.
+To improve my naming, I will be walking through the process above in this GitHub repo. I will be using [Emily Bache's Gilded Rose Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata), since the source code is terribly illegible. I will be moving the source code through each of the naming stages, until it forms a domain abstraction.
