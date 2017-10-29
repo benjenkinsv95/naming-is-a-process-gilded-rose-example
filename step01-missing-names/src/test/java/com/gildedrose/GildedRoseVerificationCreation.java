@@ -24,13 +24,16 @@ public class GildedRoseVerificationCreation {
 
         for (int sellIn = -5; sellIn < 15; sellIn++) {
             for (int quality = -5; quality < 55; quality++) {
+                writer.write(String.format("After iteration[sellIn:%d, quality:%d]", sellIn, quality));
+                writer.newLine();
+
                 for (String name : names) {
                     final Item item = new Item(name, sellIn, quality);
                     Item[] items = new Item[]{item};
                     GildedRose app = new GildedRose(items);
                     app.updateQuality();
-                    writer.write(String.format("[%d, %d] %s should sell in %d and has quality %d.",
-                            sellIn, quality, item.name, item.sellIn, item.quality));
+                    writer.write(String.format("%s should sell in %d and has quality %d.",
+                             item.name, item.sellIn, item.quality));
                     writer.newLine();
                 }
                 writer.newLine();
