@@ -41,9 +41,7 @@ class GildedRose {
     }
 
     private void handleBasedOnSellIn(Item item) {
-        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-            item.sellIn = item.sellIn - 1;
-        }
+        updateSellIn(item);
 
         if (item.sellIn < 0) {
             if (!item.name.equals("Aged Brie")) {
@@ -61,6 +59,12 @@ class GildedRose {
                     item.quality = item.quality + 1;
                 }
             }
+        }
+    }
+
+    private void updateSellIn(Item item) {
+        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+            item.sellIn = item.sellIn - 1;
         }
     }
 }
