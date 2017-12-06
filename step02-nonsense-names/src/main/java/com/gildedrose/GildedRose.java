@@ -43,7 +43,7 @@ class GildedRose {
     private void handleBasedOnSellIn(Item item) {
         updateSellIn(item);
 
-        if (item.sellIn < 0) {
+        if (itemExpired(item)) {
             if (!item.name.equals("Aged Brie")) {
                 if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                     if (item.quality > 0) {
@@ -60,6 +60,10 @@ class GildedRose {
                 }
             }
         }
+    }
+
+    private boolean itemExpired(Item item) {
+        return item.sellIn < 0;
     }
 
     private void updateSellIn(Item item) {
