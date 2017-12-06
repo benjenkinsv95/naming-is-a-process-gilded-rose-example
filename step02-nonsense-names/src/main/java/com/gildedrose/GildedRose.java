@@ -36,11 +36,11 @@ class GildedRose {
                 }
             }
 
-            toBeNamed(items[i]);
+            handleBasedOnSellIn(items[i]);
         }
     }
 
-    private void toBeNamed(Item item) {
+    private void handleBasedOnSellIn(Item item) {
         if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
             item.sellIn = item.sellIn - 1;
         }
