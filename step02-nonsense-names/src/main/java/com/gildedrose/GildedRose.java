@@ -36,11 +36,11 @@ class GildedRose {
                 }
             }
 
-            handleBasedOnSellIn(items[i]);
+            updateBasedOnSellIn(items[i]);
         }
     }
 
-    private void handleBasedOnSellIn(Item item) {
+    private void updateBasedOnSellIn(Item item) {
         updateSellIn(item);
 
         if (itemExpired(item)) {
