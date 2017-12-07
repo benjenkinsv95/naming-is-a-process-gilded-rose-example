@@ -27,10 +27,8 @@ class GildedRose {
             if (item.quality < 50) {
                 increaseQuality(item);
             }
-        } else {
-            if (item.quality > 0) {
-                decreaseQuality(item);
-            }
+        } else if (item.quality > 0) {
+            decreaseQuality(item);
         }
     }
 
@@ -49,16 +47,12 @@ class GildedRose {
     }
 
     private void updateBackstagePassQuality(Item item) {
-        if (item.sellIn < 11) {
-            if (item.quality < 50) {
-                item.quality = item.quality + 1;
-            }
+        if (item.sellIn < 11 && item.quality < 50) {
+            item.quality = item.quality + 1;
         }
 
-        if (item.sellIn < 6) {
-            if (item.quality < 50) {
-                item.quality = item.quality + 1;
-            }
+        if (item.sellIn < 6 && item.quality < 50) {
+            item.quality = item.quality + 1;
         }
     }
 
@@ -75,14 +69,10 @@ class GildedRose {
             if (item.quality < 50) {
                 item.quality = item.quality + 1;
             }
-        } else {
-            if (item.name.equals(BACKSTAGE_PASSES)) {
-                item.quality = item.quality - item.quality;
-            } else {
-                if (item.quality > 0) {
-                    decreaseQuality(item);
-                }
-            }
+        } else if (item.name.equals(BACKSTAGE_PASSES)) {
+            item.quality = item.quality - item.quality;
+        } else if (item.quality > 0) {
+            decreaseQuality(item);
         }
     }
 
