@@ -13,8 +13,7 @@ class GildedRose {
     }
 
     public void updateQuality() {
-        Arrays.stream(items)
-                .forEach(this::updateItemQuality);
+        Arrays.stream(items).forEach(this::updateItemQuality);
     }
 
     private void updateItemQuality(Item item) {
