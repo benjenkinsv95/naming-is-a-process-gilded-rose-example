@@ -10,3 +10,13 @@ Using `item` instead of `items[i]` increases the readability.
 
 ### Can be replaced with '0' refactoring
 Using `0` instead of `item.quality - item.quality`.
+
+### Invert negative if statements refactoring
+#### Negative If Statement Example
+![Alt text](before_inversion.png "If statement that hasnt been inverted")
+
+#### Invert dialog
+![Alt text](invert_dialog.png "A dialog in IntelliJ to invert it")
+
+#### Inverted example
+![Alt text](after_inversion.png "The inverted code.")
