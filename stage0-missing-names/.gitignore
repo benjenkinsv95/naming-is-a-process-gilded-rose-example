@@ -1,0 +1,11 @@
+.idea/
+*.iml
+target/
+
+.classpath
+.project
+bin/
+.settings/
+test.txt
+desktop.ini
+/gilded_rose_output.txt
